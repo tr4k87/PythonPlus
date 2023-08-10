@@ -30,7 +30,6 @@
 from random import randint
 num = randint(0, 1000)
 count = 0
-print(num)
 while count < 10:
     print(f'У  вас осталось {10 - count} попыток') 
     a = int(input('Введите число от 0 до 1000: '))
