@@ -43,7 +43,8 @@ elif enter == '6':
     quantity = int(input('С каким количеством расширений будем создавать файлы?\n'))
     my_dict = {}
     count = 1
-    os.path.exists('my_folder')
+    if not os.path.exists('my_folder'):
+        os.mkdir('my_folder')
     for i in range(quantity):
         extension = input(f'Введите {count} расширение:\n')
         copy_file = input(f'Какое количество файлов будем делать с расширением {extension}:\n')
